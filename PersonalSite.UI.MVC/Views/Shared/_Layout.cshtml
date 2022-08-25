@@ -40,37 +40,84 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+    @*FIX: Conditional header/nav, different for Contact view *@
 
-      <h1><a href="index.html">Jake Bush</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2 class="bright strong bold">I'm a growing <span class="bright strong bold">Full Stack Web Developer</span> based out of Kansas City</h2>
+    @if (ViewData["Title"].ToString() != "Contact")
+    {
+        <!-- ======= Header ======= -->
+        <header id="header">
+            <div class="container">
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link bleh container active rounded p-1" href="#header">Home</a></li>
-          <li><a class="nav-link rounded p-1" href="#about">About</a></li>
-          <li><a class="nav-link rounded p-1" href="#resume">Resume</a></li>
-          <li><a class="nav-link rounded p-1" href="#services">Classmates</a></li>
-          <li><a class="nav-link rounded p-1" href="#portfolio">Portfolio</a></li>
-          <li><a href="@Url.Action("Contact", "Home")" class="nav-link rounded p-1">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+                <h1><a href="index.html">Jake Bush</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+                <h2 class="bright strong bold">I'm a growing <span class="bright strong bold">Full Stack Web Developer</span> based out of Kansas City</h2>
 
-      <div class="social-links">
-@*        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>*@
-        <a href="https://www.linkedin.com/in/jake-bush-1b47a3249/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
-      </div>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link bleh container active rounded p-1" href="#header">Home</a></li>
+                        <li><a class="nav-link rounded p-1" href="#about">About</a></li>
+                        <li><a class="nav-link rounded p-1" href="#resume">Resume</a></li>
+                        <li><a class="nav-link rounded p-1" href="#services">Classmates</a></li>
+                        <li><a class="nav-link rounded p-1" href="#portfolio">Portfolio</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")" class="nav-link rounded p-1">Contact</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
 
-    </div>
-  </header><!-- End Header -->
- 
+                <div class="social-links">
+                    @*        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>*@
+                    <a href="https://www.linkedin.com/in/jake-bush-1b47a3249/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- End Header -->
+    }
+    else
+    {
+        <!-- ======= Header ======= -->
+        <header id="header" class="header-top">
+            <div class="container">
+
+                <h1><a href="index.html">Jake Bush</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+                <h2 class="bright strong bold">I'm a growing <span class="bright strong bold">Full Stack Web Developer</span> based out of Kansas City</h2>
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+@*                        <li><a class="nav-link bleh container active rounded p-1" href="#header">Home</a></li>
+                        <li><a class="nav-link rounded p-1" href="#about">About</a></li>
+                        <li><a class="nav-link rounded p-1" href="#resume">Resume</a></li>
+                        <li><a class="nav-link rounded p-1" href="#services">Classmates</a></li>
+                        <li><a class="nav-link rounded p-1" href="#portfolio">Portfolio</a></li>
+                        <li><a href="@Url.Action("Contact", "Home")" class="nav-link rounded p-1">Contact</a></li>*@
+                        <li>@Html.ActionLink("Home", "Index", "Home", null, null, "header", null, new { @class = "nav-link bleh container active rounded p-1"})</li>
+                        <li>@Html.ActionLink("About", "Index", "Home", null, null, "about", null, new { @class = "nav-link rounded p-1"})</li>
+                        <li>@Html.ActionLink("Resume", "Index", "Home", null, null, "resume", null, new { @class = "nav-link rounded p-1"})</li>
+                        <li>@Html.ActionLink("Services", "Index", "Home", null, null, "services", null, new { @class = "nav-link rounded p-1"})</li>
+                        <li>@Html.ActionLink("Portfolio", "Index", "Home", null, null, "portfolio", null, new { @class = "nav-link rounded p-1"})</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", null, null, "header", null, new { @class = "nav-link rounded p-1 active"})</li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+                <div class="social-links">
+                    @*        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>*@
+                    <a href="https://www.linkedin.com/in/jake-bush-1b47a3249/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- End Header -->
+    }
 
 
   @RenderBody()

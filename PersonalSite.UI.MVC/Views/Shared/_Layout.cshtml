@@ -12,21 +12,23 @@
   <!-- Favicons -->
   <link href="~/assets/img/favicon.png" rel="icon">
   <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ 
 
   <!-- Google Fonts -->
-  <link href="~/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="~/asssets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="~/assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="~/assets/css/custom.css">
+
 
   <!-- =======================================================
   * Template Name: Personal - v4.7.0
@@ -54,16 +56,16 @@
           <li><a class="nav-link rounded p-1" href="#resume">Resume</a></li>
           <li><a class="nav-link rounded p-1" href="#services">Classmates</a></li>
           <li><a class="nav-link rounded p-1" href="#portfolio">Portfolio</a></li>
-          <li><a asp-action="Contact" asp-controller="Home" class="nav-link rounded p-1">Contact</a></li>
+          <li><a href="@Url.Action("Contact", "Home")" class="nav-link rounded p-1">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+@*        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="~/https://www.linkedin.com/in/jake-bush-1b47a3249/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>*@
+        <a href="https://www.linkedin.com/in/jake-bush-1b47a3249/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div>
@@ -80,9 +82,9 @@
     <!-- You can delete the links only if you purchased the pro version. -->
     <!-- Licensing information: https://bootstrapmade.com/license/ -->
     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="~/https://bootstrapmade.com/">BootstrapMade</a>
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
   </div>
-  <script src="~/https://kit.fontawesome.com/a3fc44512c.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a3fc44512c.js" crossorigin="anonymous"></script>
   <!-- Vendor JS Files -->
   <script src="~/assets/vendor/purecounter/purecounter.js"></script>
   <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
